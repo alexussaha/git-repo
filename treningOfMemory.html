@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+function compareNumbers(userAnswer, answer){
+	if(userAnswer == answer){
+
+			alert("Всё верно");
+	}else {
+		alert("А вот и нет. Правильный ответ " + answer);
+	}
+}
+	var numbers = [];
+
+	for (var i = 0; i<5; i++) {
+		
+	
+	var randomNumber = parseInt(Math.random()*100);
+	numbers.push(randomNumber);
+	}
+
+	alert("Запомните числа и их порядок: " + numbers);
+
+	var userAnswer = +prompt("Каким было первое число?");
+	compareNumbers(userAnswer, numbers[0]);
+	userAnswer = +prompt("А последнее?");
+	compareNumbers(userAnswer,numbers[numbers.length-1]);
+
+	var n = parseInt(Math.random()*numbers.length);
+	userAnswer = +prompt("А как насчёт числа под номером" + (n+1) + "?");
+	compareNumbers(userAnswer, numbers[n]);
+		
+
+</script>

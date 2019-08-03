@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer =parseInt(Math.random()*100);
+	var fistUserAnswer;
+	var secondUserAnswer;
+   
+   do{
+   	 fistUserAnswer = +prompt("Первый игрок. Введите число от 0 до 100.\n Введите -1 для выхода из игры");
+		if(fistUserAnswer == answer){
+			alert("Поздравляем, Вы выиграли!");
+			break;
+		}else if(fistUserAnswer == -1) {break;
+		} else if(fistUserAnswer > answer){
+			alert("Вы ввели слишком большое число");
+		} else if(fistUserAnswer < answer) {
+			alert("Вы ввели слишком маленькое число");
+	}
+	 secondUserAnswer = +prompt("Виорой игрок. Введите число от 0 до 100.\n Введите -2 для выхода из игры");
+	if(secondUserAnswer == answer){
+			alert("Поздравляем, Вы выиграли!");
+			break;
+		}else if(secondUserAnswer == -2) {break;
+		} else if(secondUserAnswer > answer){
+			alert("Вы ввели слишком большое число");
+		} else if(secondUserAnswer < answer) {
+			alert("Вы ввели слишком маленькое число");
+	}
+
+
+	}while(secondUserAnswer != -2)
+
+</script>

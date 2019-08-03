@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var sum = +prompt("Введите сумму вклада в рублях:");
+	var per = +prompt("Введите процент");
+	var fullSum = sum;
+
+	document.write("Сумма вклада по годам: <br \/>");
+	for(var i = 0; i < 5; i++){
+
+		fullSum = fullSum + (fullSum * per / 100);
+
+		document.write((i+1) + " год" + " - " + fullSum + " <br \/>");
+
+
+	}
+	alert("Ваш вклад равный " + sum + " рублей через 5 лет будет равен " + fullSum.toFixed(2) + " рублей.\nДля того, чтобы посмотреть сумму вклада по годам, закройте это уведомление.");
+
+</script>
